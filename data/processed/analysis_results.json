@@ -1,0 +1,230 @@
+{
+  "assumptions": {
+    "capital_usd": 100000.0,
+    "horizon_common_sessions": 1,
+    "confidence": 0.95,
+    "n_simulations": 100000,
+    "seed": 42,
+    "annual_sessions": 252,
+    "return_model": "weighted_log_return_approximation"
+  },
+  "data": {
+    "price_rows": 502,
+    "return_rows": 501,
+    "source_sha256": {
+      "BTC": "ffd3e1b5e36f71daffe13d337ba48b921dcdd21f6fc818b2f41329da8be6733b",
+      "GOLD": "4805db4ec33c8cf9bee70d553ab6c367a198c02ac06914fa7910ef4d818dc55a",
+      "SP500": "015290f59fd0e807daf4b355a9042a221bee91aa95363ae62eb95a4930ea8e62"
+    }
+  },
+  "correlation": {
+    "BTC": {
+      "BTC": 1.0,
+      "GOLD": 0.09421985452077697,
+      "SP500": 0.2665298042565553
+    },
+    "GOLD": {
+      "BTC": 0.09421985452077697,
+      "GOLD": 1.0,
+      "SP500": 0.12051627992708448
+    },
+    "SP500": {
+      "BTC": 0.2665298042565553,
+      "GOLD": 0.12051627992708448,
+      "SP500": 1.0
+    }
+  },
+  "mu_daily": {
+    "BTC": 0.0034425357271656142,
+    "GOLD": 0.0007088604803105227,
+    "SP500": 0.0008592820937752439
+  },
+  "covariance_daily": {
+    "BTC": {
+      "BTC": 0.0010400757736529504,
+      "GOLD": 2.7450065290882184e-05,
+      "SP500": 6.969140357332907e-05
+    },
+    "GOLD": {
+      "BTC": 2.7450065290882184e-05,
+      "GOLD": 8.160878730370107e-05,
+      "SP500": 8.827040521752119e-06
+    },
+    "SP500": {
+      "BTC": 6.969140357332907e-05,
+      "GOLD": 8.827040521752119e-06,
+      "SP500": 6.573578919308896e-05
+    }
+  },
+  "portfolio": {
+    "mean_log_return_daily": 0.0013308063364139016,
+    "variance_daily": 8.526216980782068e-05,
+    "volatility_daily": 0.009233751664833784,
+    "volatility_annual": 0.14658126343967298,
+    "weighted_asset_volatility_daily": 0.013214049143370935,
+    "risk_contributions_daily": {
+      "BTC": 0.0054386534361933,
+      "GOLD": 0.0011171895484623194,
+      "SP500": 0.0026779086801781643
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "Cơ sở 20/30/50",
+      "Mean log return/ngày (%)": 0.13308063364139017,
+      "Mean log return/năm (%)": 33.536319677630324,
+      "Variance/ngày": 8.526216980782066e-05,
+      "Volatility/ngày (%)": 0.9233751664833784,
+      "Volatility/năm (%)": 14.658126343967298
+    },
+    {
+      "scenario": "Chia đều",
+      "Mean log return/ngày (%)": 0.1670226100417127,
+      "Mean log return/năm (%)": 42.0896977305116,
+      "Variance/ngày": 0.00015548415210240744,
+      "Volatility/ngày (%)": 1.246932845434779,
+      "Volatility/năm (%)": 19.794445263711406
+    },
+    {
+      "scenario": "10/40/50",
+      "Mean log return/ngày (%)": 0.10574388117283924,
+      "Mean log return/năm (%)": 26.64745805555549,
+      "Variance/ngày": 5.258807279269824e-05,
+      "Volatility/ngày (%)": 0.7251763426415553,
+      "Volatility/năm (%)": 11.51181755578152
+    }
+  ],
+  "risk": {
+    "Chuẩn đa biến": {
+      "quantile_log_return": -0.013918084026108408,
+      "var_usd": 1382.1675287888286,
+      "es_usd": 1764.343507868338,
+      "tail_count": 5000,
+      "tail_fraction": 0.05
+    },
+    "Bootstrap lịch sử": {
+      "quantile_log_return": -0.013042841718418045,
+      "var_usd": 1295.8152454439366,
+      "es_usd": 1852.0640365941767,
+      "tail_count": 5026,
+      "tail_fraction": 0.05026
+    }
+  },
+  "simulation_moments": {
+    "Chuẩn đa biến": {
+      "Mean mô phỏng (%)": 0.13246118556483524,
+      "Mean mốc (%)": 0.13308063364139017,
+      "SD mô phỏng (%)": 0.9266580723639336,
+      "SD mốc (%)": 0.9233751664833784,
+      "Sai lệch mean/SE": 0.21214202907190516,
+      "Sai lệch SD (%)": 0.35553326532031804
+    },
+    "Bootstrap lịch sử": {
+      "Mean mô phỏng (%)": 0.13353817130085158,
+      "Mean mốc (%)": 0.13308063364139017,
+      "SD mô phỏng (%)": 0.925282150193055,
+      "SD mốc (%)": 0.9224531740752393,
+      "Sai lệch mean/SE": 0.15684927537390086,
+      "Sai lệch SD (%)": 0.3066796448125242
+    }
+  },
+  "distribution_diagnostics": {
+    "BTC": {
+      "Volatility/ngày (%)": 3.2250205792412405,
+      "Skewness": 0.7119217437170301,
+      "Kurtosis Pearson": 6.372243472114552,
+      "Excess kurtosis": 3.372243472114552,
+      "JB": 279.7115630114886,
+      "p-value tiệm cận": 1.825600852129695e-61
+    },
+    "GOLD": {
+      "Volatility/ngày (%)": 0.9033758204850353,
+      "Skewness": -0.19320856437022663,
+      "Kurtosis Pearson": 4.4332888503951855,
+      "Excess kurtosis": 1.4332888503951855,
+      "JB": 46.00088325631814,
+      "p-value tiệm cận": 1.0257348697259291e-10
+    },
+    "SP500": {
+      "Volatility/ngày (%)": 0.8107761046866698,
+      "Skewness": -0.2844298908127005,
+      "Kurtosis Pearson": 3.7332130104576366,
+      "Excess kurtosis": 0.7332130104576366,
+      "JB": 17.977607820728327,
+      "p-value tiệm cận": 0.00012479927512187012
+    }
+  },
+  "summary": [
+    {
+      "Chỉ tiêu": "Tương quan BTC–Gold",
+      "Giá trị": 0.09421985452077697,
+      "Đơn vị": "Pearson r"
+    },
+    {
+      "Chỉ tiêu": "Tương quan BTC–S&P 500",
+      "Giá trị": 0.2665298042565553,
+      "Đơn vị": "Pearson r"
+    },
+    {
+      "Chỉ tiêu": "Tương quan Gold–S&P 500",
+      "Giá trị": 0.12051627992708448,
+      "Đơn vị": "Pearson r"
+    },
+    {
+      "Chỉ tiêu": "Mean log return cơ sở/ngày",
+      "Giá trị": 0.13308063364139017,
+      "Đơn vị": "%"
+    },
+    {
+      "Chỉ tiêu": "Mean log return cơ sở/năm",
+      "Giá trị": 33.536319677630324,
+      "Đơn vị": "%"
+    },
+    {
+      "Chỉ tiêu": "Volatility cơ sở/ngày",
+      "Giá trị": 0.9233751664833784,
+      "Đơn vị": "%"
+    },
+    {
+      "Chỉ tiêu": "Volatility cơ sở/năm",
+      "Giá trị": 14.658126343967298,
+      "Đơn vị": "%"
+    },
+    {
+      "Chỉ tiêu": "VaR 95% – Chuẩn đa biến",
+      "Giá trị": 1382.1675287888286,
+      "Đơn vị": "USD/phiên"
+    },
+    {
+      "Chỉ tiêu": "ES 95% – Chuẩn đa biến",
+      "Giá trị": 1764.343507868338,
+      "Đơn vị": "USD/phiên"
+    },
+    {
+      "Chỉ tiêu": "VaR 95% – Bootstrap lịch sử",
+      "Giá trị": 1295.8152454439366,
+      "Đơn vị": "USD/phiên"
+    },
+    {
+      "Chỉ tiêu": "ES 95% – Bootstrap lịch sử",
+      "Giá trị": 1852.0640365941767,
+      "Đơn vị": "USD/phiên"
+    }
+  ],
+  "validation": {
+    "variance_consistent": true,
+    "risk_contributions_consistent": true,
+    "simulation_moments_passed": true,
+    "es_at_least_var": true,
+    "same_environment_seed_replay_passed": true
+  },
+  "environment": {
+    "python": "3.12.6",
+    "numpy": "2.2.3",
+    "pandas": "3.0.3",
+    "scipy": "1.15.2",
+    "matplotlib": "3.10.8",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  }
+}
